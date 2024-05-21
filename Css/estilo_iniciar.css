@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+small{
+    display: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: url(https://img.freepik.com/foto-gratis/equipo-peluqueria-espacio-copia_23-2148352849.jpg?w=740&t=st=1713383222~exp=1713383822~hmac=1f36480ef72c5866e3c93e8895ec1f2ab039d0f3a9a23999aaf9a6d087dc9c75) no-repeat center center fixed;
+    background-size: cover;
+}
+.contenedor{
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    background-color:palevioletred;
+    border-radius: 5px;
+}
+.contenedor .titulo{
+    font-size: 25px;
+    font-weight: 500;
+}
+.contenedor form{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    margin: 10px 12px 0;
+}
+form .formulario-grupo{
+    margin-bottom: 15px;
+    width: calc(100% - 30px);
+}
+form span{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.formulario-grupo input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc; /* Cambié border-radius por border */
+    padding-left: 15px;
+    transition: all 0.3s ease;
+}
+.formulario-grupo input:focus,
+.formulario-grupo input:valid{
+    border-color: skyblue;
+}
+form .boton{
+    width: 50%;
+    height: 40px;
+    margin: 40px 0;
+    align-items: center;
+}
+form .boton input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(130deg,#e0d8b0) ;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+form .boton input:hover{
+    background: linear-gradient(130deg,skyblue,blue);
+}
+.was-validated small{
+    display: block;
+    color:red;
+}
+@media(max-width: 554px){
+    .contenedor{
+        max-width: 100%;
+    }
+    form .formulario-grupo{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .contenedor form{
+        max-height: 400px;
+        overflow: scroll;
+    }
+    .contenedor fore::-webkit-scrollbar{
+        width: 0;
+    }
+    form .boton{
+        margin: 20px 0;
+    }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Beautybooker</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ca9ec2;
+        }
+        header {
+            background-color: #010204;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #425151;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .services {
+            text-align: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 80%;
+        }
+        .services h2 {
+            margin-bottom: 20px;
+        }
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .services li {
+            margin-bottom: 10px;
+        }
+        .services button {
+            background-color: #010204;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .services button:hover {
+            background-color: #333;
+        }
+        /* Estilos para el formulario de citas */
+        .form-container {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Beautybooker</h1>
+</header>
+
+<nav>
+    <a href="Proyecto.html">Inicio</a>
+    <a href="Servicios.html">Servicios</a>
+    <a href="Contacto.html">Contacto</a>
+    <a href="Productos.html">Productos</a>
+</nav>
+
+<section id="servicios">
+    <div class="services">
+        <h2>Servicios</h2>
+        <ul>
+            <li>
+                <h3>Masajes relajantes</h3>
+                <p>Duración: 60 minutos</p>
+                <p>Precio: $50</p>
+                <button id="masajes-btn">Solicitar</button>
+            </li>
+            <li>
+                <h3>Corte y peinado</h3>
+                <p>Duración: 90 minutos</p>
+                <p>Precio: $40</p>
+                <button id="corte-btn">Solicitar</button>
+            </li>
+            <!-- Agrega más servicios aquí -->
+        </ul>
+    </div>
+</section>
+
+<div class="form-container" id="cita-form" style="display: none;">
+    <h2>Agenda tu cita</h2>
+    <form id="cita-formulario" action="enviar_cita.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<script src="servicios.js">
+
+</script>
+
+</body>
+</html>

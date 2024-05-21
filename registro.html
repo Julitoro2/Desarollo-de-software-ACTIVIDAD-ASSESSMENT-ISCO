@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo_Registro.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">Registro</div>
+        <form id="Form-validacion" action="index.html" novalidate>
+            <div class="formulario-grupo">
+                <span>Nombre</span>
+                <input type="text" placeholder="Ingrese nombre completo" required>
+                <small class="error">Este elemento es requerido</small>
+            </div>
+            <div class="formulario-grupo">
+                <span>Correo</span>
+                <input type="email" placeholder="Ingrese correo" required>
+                <small class="error">Este elemento requere @g</small>
+            </div>
+            <div class="formulario-grupo">
+                <span>Contraseña</span>
+                <input type="password" placeholder="Ingrese Contraseña" required>
+                <small class="error">Este elemento es requerido</small>
+            </div>
+            <div class="formulario-grupo">
+                <span>Confirmar Contraseña</span>
+                <input type="password" placeholder="Confirmar Contraseña" required>
+                <small class="error">Este elemento es requerido</small>
+            </div>
+            
+            <div class="boton">
+                <input type="submit" value="Registrarse">
+            </div>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById("Form-validacion");
+        form.addEventListener("submit", function(event) {
+            const inputs = form.querySelectorAll('input[required]');
+            inputs.forEach(function(input) {
+                if (!input.checkValidity()) {
+                    input.classList.add('is-invalid');
+                    input.nextElementSibling.style.display = 'block';
+                    event.preventDefault();
+                } else {
+                    input.classList.remove('is-invalid');
+                    input.nextElementSibling.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
